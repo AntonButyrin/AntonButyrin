@@ -1,4 +1,4 @@
-h1 align="center">Hi 👋, I'm Anton Butyrin</h1>
+<h1 align="center">Hi 👋, I'm Anton Butyrin</h1>
 <h3 align="center">Im backend developer and study frontend sometimes</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=antonbutyrin&label=Profile%20views&color=900eb4&style=plastic" alt="antonbutyrin" /> </p>
