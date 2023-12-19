@@ -1,20 +1,42 @@
-<h1 align="center">Hi 👋, I'm Anton Butyrin</h1>
-<h3 align="center">Im middle backend developer</h3>
+```
+use std::io;
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=antonbutyrin&label=Profile%20views&color=900eb4&style=plastic" alt="antonbutyrin" /> </p>
+fn main() {
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=antonbutyrin" alt="antonbutyrin" /></a> </p>
+    let mut language: String = String::new();
+    let mut stack: Vec<&str> = Vec::new();
+    
+    println!("Hi there, I'm Anton, a backend developer, type language:");
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/anton-butyrin-244baa1b1" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="anton-butyrin-244baa1b1" height="30" width="40" /></a>
-</p>
+    io::stdin().read_line(&mut language).expect("Sorry, I understand only string format");
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> </a> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="django" width="40" height="40"/> </a> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.nginx.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg" alt="nginx" width="40" height="40"/> </a> <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://redis.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" alt="redis" width="40" height="40"/> </a> <a href="https://www.sqlite.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" alt="sqlite" width="40" height="40"/> </a> </p>
+    let language: String = language.trim().to_lowercase();
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=antonbutyrin&show_icons=true&locale=en&layout=compact" alt="antonbutyrin" /></p>
+    match language.as_str() {
+        "python" => {
+            stack = vec!["Python 3.v", "Django", "FastApi", "Flask", "SQLAlchemy", "SQLModel", "Tortoise ORM", "bs4"];
+        }
+        "rust" => {
+            stack = vec!["Rust", "Actix-web", "Rocket", "Tokio", "Diesel", "SQLx"];
+        }
+        _ => {
+            println!("Sorry, I don't know this language");
+        }
+    }
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=antonbutyrin&show_icons=true&theme=dark&locale=en" alt="antonbutyrin" /></p>
+    if !stack.is_empty() {
+        let other_skills = vec![
+            "SQL", "PostgreSQL", "JavaScript", "HTML", "CSS", "Docker", "Nginx", "Git", "Redis", "Celery", "Kafka",
+        ];
+        println!("My stack: {:?}", stack);
+        println!("My other skills: {:?}", other_skills);
+    }
+}
+```
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=antonbutyrin&theme=dark" alt="antonbutyrin" /></p>
+
+
+
+
+
+
